@@ -4,7 +4,6 @@ from flask import Flask, render_template, request
 
 # todo Initialization GPIO PINS
 #! =================================================================
-
 # ? ForWard_Pin1 = 18
 # ? ForWard_Pin2 = 19
 
