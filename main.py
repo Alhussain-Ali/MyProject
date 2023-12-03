@@ -68,7 +68,7 @@ from flask import Flask, render_template, request
 #! ==========================================================================================
 
 # todo duty_cycle = 50
-
+#!note
 # todo If The Value of duty_cycle is 0   --> output is Zero
 # todo If The Value of duty_cycle is 100 --> output is Full
 
