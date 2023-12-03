@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>interface</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="camera">camera</div>
+      <div class="btn-control">
+
+        <button class="btn" onclick="SendForWard()" onmouseup="clear()" id="ForWard" >ForWard</button>
+        <div>
+          <button class="btn" onclick="SendLeft()" id="left">Left</button>
+          <button class="btn" onclick="SendStop()" id="Stop">Stop</button>
+          <button class="btn" onclick="SendRight()" id="Right">Right</button>
+        </div>
+        <button class="btn" onclick="SendBackWard()" id="BackWard">BackWard</button>
+      </div>
+      
+
+      <!-- ********************************************************** -->
+      <input
+        type="range"
+        onchange="SendValue()"
+        min="0"
+        max="101"
+        step="15"
+        value="0"
+        class="speed"
+        id="speed"
+        name="speed"
+      />
+      <p id="speed-car">speed : <span id="speed-num">0 </span>km</p>
+
+      <div class="btn-interface">
+        <button onclick="forwardLed()">ForWard_Led</button>
+        <button onclick="backwardLed()">backWard_Led</button>
+        <button onclick="power()">power</button>
+        <button onclick="buzzer()">Buzzer</button>
+        <button onclick="music()">music</button>
+        <button class="v_motor btn" onclick="V_motor()" style="width: 100%;"> v_motor</button>
+      </div>
+
+    </div>
+
+  
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+  </body>
+</html>
