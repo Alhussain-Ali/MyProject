@@ -3,7 +3,8 @@ from flask import Flask, render_template, request
 # pip install RPi.GPIO
 
 # todo Initialization GPIO PINS
-#! =================================================================
+#! ==========================================================================================
+
 # ? ForWard_Pin1 = 18
 # ? ForWard_Pin2 = 19
 
@@ -25,7 +26,7 @@ from flask import Flask, render_template, request
 
 # ? Power_Car = 30
 
-#! =================================================================
+#! ==========================================================================================
 
 # GPIO.setmode(GPIO.BCM)
 
@@ -50,7 +51,7 @@ from flask import Flask, render_template, request
 
 # ? GPIO.setup(Power_Car, GPIO.OUT)
 
-#! =================================================================
+#! ==========================================================================================
 
 # todo Pwm_Left_Right_Pin1 = GPIO.PWM(Left_Right_Pin1,100)    // Determine PWM Frequency
 # todo Pwm_Left_Right_Pin2 = GPIO.PWM(Left_Right_Pin2,100)    // Determine PWM Frequency
@@ -64,7 +65,7 @@ from flask import Flask, render_template, request
 # * Pwm_Vibration_Pin1 = GPIO.PWM(Vibration_Pin1,100)    // Determine PWM Frequency
 # * Pwm_Vibration_Pin2 = GPIO.PWM(Vibration_Pin2,100)    // Determine PWM Frequency
 
-#! =================================================================
+#! ==========================================================================================
 
 # todo duty_cycle = 50
 
@@ -73,7 +74,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-#! =================================================================
+#! ==========================================================================================
 # * Put Initial Value To The Led And Actuators
 
 # ? GPIO.output(ForWard_Led1, GPIO.LOW)
@@ -96,7 +97,7 @@ app = Flask(__name__)
     # * Pwm_Vibration_Pin1.stop()
     # * Pwm_Vibration_Pin2.stop()
 
-#! =================================================================
+#! ==========================================================================================
 
 @app.route("/")
 def home():
