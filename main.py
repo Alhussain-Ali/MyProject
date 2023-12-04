@@ -225,6 +225,7 @@ def V_motor():
     # * Pwm_Vibration_Pin1.stop()
     # * Pwm_Vibration_Pin2.start(slider_value)
 
+
     return "success"
 
 
@@ -270,4 +271,4 @@ def buzzer():
 def music():
     print("music")
 
-    return "success"
+    return "s"
