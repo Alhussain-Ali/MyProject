@@ -10,7 +10,7 @@
 
    <link
       rel="stylesheet"
-      href="{{url_for('static',filename='css/style.css')}}"
+      href="{{url_for('static',filename='css/auth.css')}}"
     /> 
 
  </head> 
@@ -27,10 +27,10 @@
                     <div class="signup">
                         <form>
                             <label for="chk" aria-hidden="true">Sign up</label>
-                            <input type="text" name="txt" placeholder="User name" required="">
-                            <input type="email" name="email" placeholder="Email" required="">
-                            <input type="password" name="pswd" placeholder="Password" required="">
-                            <button>Sign up</button>
+                            <input type="text" name="txt" id="user-name" placeholder="User name" required="">
+                            <input type="email" name="email" id="email" placeholder="Email" required="">
+                            <input type="password" name="pswd" id="password" placeholder="Password" required="">
+                            <button onclick="setPath()" id="sign_up">Sign up</button>
                         </form>
                     </div>
 
@@ -46,7 +46,7 @@
 
   </section> <!-- partial --> 
     </div>
-    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+    <script src="{{url_for('static',filename='js/auth.js')}}"></script>
 
  </body>
 
