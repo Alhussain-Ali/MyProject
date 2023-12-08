@@ -121,3 +121,8 @@ setInterval(() => {
 
 
 // end 
+
+// ste path function 
+function setPath(){
+    window.location.href="/index"
+}

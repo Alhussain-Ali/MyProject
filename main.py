@@ -100,6 +100,10 @@ app = Flask(__name__)
 #! ==========================================================================================
 
 @app.route("/")
+def login():
+    return render_template("auth.html")
+
+@app.route("/index")
 def home():
     return render_template("index.html")
 
