@@ -1,3 +1,21 @@
+/*  auth    */
+let formUP = document.getElementById("form-up")
+let formIN = document.getElementById("form-login")
+
+// formIN.addEventListener("submit" , (e) => {
+//     e.preventDefault()
+//     console.log("test1")
+    
+// })
+// formUP.addEventListener("submit" , (e) => {
+//     e.preventDefault()
+//     console.log("test2")
+    
+// })
+
+
+/* auth  */
+
 
 function SendForWard() {
     fetch('/ForWard')

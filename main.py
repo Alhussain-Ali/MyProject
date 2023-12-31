@@ -98,10 +98,17 @@ app = Flask(__name__)
     # * Pwm_Vibration_Pin2.stop()
 
 #! ==========================================================================================
-
-@app.route("/")
+username = email = pswd = ""
+@app.route("/" , methods=['POST' , 'GET'] )
 def login():
-    return render_template("auth.html")
+    if request.method == 'POST':
+        username = request.form.get("username")
+        email = request.form.get("email")
+        pswd = request.form.get("pswd")
+        print(username,email,pswd)
+        return render_template("auth.html")
+    else:
+        return render_template("auth.html")
 
 @app.route("/index")
 def home():
@@ -276,3 +283,21 @@ def music():
     print("music")
 
     return "s"
+
+"""  *******************     """ 
+
+
+# @app.route('/', methods=['POST' , 'GET'])
+# def register():
+#     if request.method == 'POST':
+#         username = request.form.get("txt")
+#         email = request.form.get("email")  
+#         password = request.form.get("pswd")  
+
+        
+#         print(email , password)
+#         print("test")
+
+#         # يمكنك إضافة المزيد من المنطق هنا، مثل التحقق من صحة البريد الإلكتروني وكلمة المرور
+
+#         return jsonify({"message": "Registration successful!"})
